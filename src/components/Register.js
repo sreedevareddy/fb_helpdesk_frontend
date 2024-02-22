@@ -23,7 +23,7 @@ const Register = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", formData);
+      const res = await axios.post("https://fb-helpdesk-server.vercel.app/api/auth/register", formData);
       console.log(res.data);
       navigate("/login");
     } catch (err) {
