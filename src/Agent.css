@@ -1,0 +1,340 @@
+.container-xxl{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    border-radius: 0;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.flex{
+    display: flex;
+}
+
+.container-xxl > div{
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+.container-xxl .nav{
+    background-color: rgb(59, 106, 237);
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.navitem1{
+    display: flex;
+    flex-direction: column;
+}
+.navitem2{
+    position: relative;
+}
+.online{
+    position: absolute;
+    content: "";
+    bottom: 20%;
+    right: 25%;
+    width: 10px;
+    border: 1px solid green;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(25, 180, 4);
+}
+
+i{
+    /* filter: invert(1); */
+    font-size: 2rem;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.navitem1 i.active{
+    color: rgb(62, 108, 233);
+    background-color: white;
+}
+
+.navitem2 img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    bottom: 0;
+}
+
+.container-xxl .chat-room{
+    background-color: white;
+    width: 24vw;
+    border: 1px solid rgba(128, 128, 128, 0.164);
+}
+
+.chat-room .heading, .message-room .heading{
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.164);
+}
+
+.heading .head1{
+    display: flex;
+    align-items: center;
+}
+
+.heading .head1 h1{
+    font-size: 1.2rem;
+}
+
+.heading .head1 i, .heading .head2 i{
+    font-size: 1.5rem;
+    color: grey;
+}
+
+.chat-box{
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.162);
+    cursor: pointer;
+}
+
+.chat-box:hover{
+    background-color: rgba(237, 237, 237, 0.618);
+}
+
+.chat-box.active{
+    background-color: rgba(223, 220, 220, 0.618);
+}
+
+.chat-info{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-info div{
+    display: flex;
+}
+.chat-info div div{
+    display: flex;
+    flex-direction: column;
+}
+.chat-info div div h3{
+    font-weight: normal;
+    font-size: 0.8rem;
+}
+.chat-info div input{
+    margin: 10px;
+}
+.chat-info .time-since{
+    font-size: 0.8rem;
+}
+
+.chat-message{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+}
+
+.chat-message h3{
+    font-size: 0.9rem;
+}
+.chat-message p{
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.container-xxl .message-room{
+    width: 50vw;
+    height: 100vh;
+    background-color: rgba(216, 215, 215, 0.275);
+    border-right: 1px solid rgba(128, 128, 128, 0.162);
+    position: relative;
+}
+
+.message-room .heading{
+    background-color: white;
+}
+
+.container-xxl .message-room .message-input{
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.message-room .message-input input{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 5px;
+}
+.message-room .message-input input[type=text]:focus{
+    border: 2px solid #0000ff;
+}
+
+.message-room h1{
+    padding: 17.5px;
+    width: 100%;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px 15px;
+}
+.message.right{
+    text-align: right;
+}
+.message.left{
+    text-align: left;
+}
+.message .message-wrap{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.message.right .message-wrap{
+    flex-direction: row-reverse;
+}
+.message .message-wrap img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    /* display: hidden; */
+    visibility: hidden;
+}
+.message .message-wrap img.img-show{
+    visibility: visible;
+}
+
+.message-wrap div{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0px 15px;
+    max-width: 500px;
+    font-size: 0.9rem;
+}
+.message-time{
+    display: none;
+    margin: 0px 50px;
+    font-size: 0.8rem;
+    padding: 5px 0px;
+}
+.message-time.last{
+    display: block;
+}
+
+.container-xxl .profile{
+    flex-grow: 1;
+    background-color: rgba(193, 198, 230, 0.275);
+}
+
+.profile .profile-content{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+}
+
+.profile .profile-content img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 20px 0px;
+}
+
+.profile-content .profile-name{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.profile-content .status{
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: rgb(106, 106, 106);
+    display: flex;
+    align-items: center;
+    line-height: 0.5;
+}
+
+.profile-content .status::before{
+    content: "\2022";
+    margin-right: 0.1em;
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.profile-btns{
+    display: flex;
+    width: 100%;
+    margin: 20px 0px;
+    justify-content: center;
+}
+.profile-btns .btn{
+    border: 1px solid rgb(223, 220, 220);
+    cursor: pointer;
+    padding: 5px 10px;
+    display: flex;
+    font-size: 0.8rem;
+    align-items: center;
+    color: rgb(21, 21, 21);
+    margin: 10px;
+    border-radius: 5px;
+}
+.profile-btns .btn i{
+    font-size: 1rem;
+    color: rgb(129, 129, 129);
+    padding: 0px 0px;
+    margin-right: 5px;
+}
+
+.profile-info{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid rgb(180, 180, 180);
+}
+
+.profile-info h3{
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.profile-info table{
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.profile-info td{
+    font-size: 0.9rem;
+    padding: 5px 0px;
+}
+
+.profile-info tr td:first-child{
+    color: grey;
+}
+
+.profile-info tr td:last-child{
+	text-align:right;
+}
+
+.profile-info button{
+    outline: none;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    color: rgb(49, 135, 221);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
